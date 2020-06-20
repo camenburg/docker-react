@@ -1,3 +1,4 @@
+language: generic
 sudo: required
 services:
     - docker
@@ -8,8 +9,7 @@ before_install:
 script:
     - docker run -e CI=true camenburg/docker-react npm run test -- --coverage
 
-language:
-    generic
+
 
 deploy:
     provider: elasticbeanstalk
